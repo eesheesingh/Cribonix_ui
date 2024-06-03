@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg {
+    background-image: url("./assets/Background.png"), url("./assets/Background2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, 50% 0%;
+    background-size: 69rem, 90rem;
+}
+
+.testimonial-bg {
+    background-image: url("./assets/testimonialBg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.freeTrial-bg {
+    background-image: url("./assets/freeTrialBg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media (max-width: 768px) {
+    .testimonial-bg {
+        background-size: auto 50%;
+    }
+
+    .freeTrial-bg {
+        background-size: 100% 100%;
+    }
+}
