@@ -10,6 +10,9 @@ import Review from "../Review/Review";
 import Suggestion from "../Suggestion/Suggestion";
 import Footer from "../Footer/Footer";
 import FreeTrial from "../FreeTrial/FreeTrial";
+import Services from "../BentoGrid/Services";
+import BlogPage from "../Suggestion/BlogPage";
+import { Route, Routes } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -28,6 +31,9 @@ const Main = () => {
           <div id="builder" className={`md:mt-[6rem] mt-[2rem] ${styles.boxWidth}`}>
             <Builder />
           </div>
+          <div id="services" className={`md:mt-[6rem] mt-[2rem] ${styles.boxWidth}`}>
+            <Services />
+          </div>
           <div className={`md:mt-[6rem] mt-[2rem] ${styles.boxWidth}`}>
             <Feature2 />
           </div>
@@ -43,6 +49,7 @@ const Main = () => {
           <div id="blog" className={`md:mt-[6rem] mt-[2rem] ${styles.boxWidth}`}>
             <Suggestion />
           </div>
+          
           <div className={`md:mt-[6rem] mt-[2rem] ${styles.boxWidth}`}>
             <Footer />
           </div>

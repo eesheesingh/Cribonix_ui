@@ -1,5 +1,5 @@
 import React from "react";
-import { homeImg, video } from "../../assets";
+import { dashboardImg, homeImg, video } from "../../assets";
 
 const Hero = () => {
   return (
@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex-1 p-4 md:p-0">
-          <img src={homeImg} alt="home" className="w-full" />
+          <img src={dashboardImg} alt="home" className="w-full" />
         </div>
       </div>
     </div>

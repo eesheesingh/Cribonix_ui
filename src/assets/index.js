@@ -4,7 +4,7 @@ import icon2 from "./Icon2.png";
 import icon3 from "./Icon3.png";
 import video from "./Video.png";
 import logo from "./Cribonix_logo.png";
-import midSectionImg from "./mid-section.png";
+import midSectionImg from "./newdashboard.png";
 import midSectionBg from "./mid-section-bg.png";
 import boxImg from "./boxImg.png";
 import zestify from "./cribonix_chart.png";
@@ -24,6 +24,7 @@ import close from "./Close Circle.png";
 import builderBg from "./builderBg.png";
 import zestifyImg from "./mob_cribonix.png";
 import dashboardImg from "./Dashboard.png"
+import blogImg from './blog7 (1).jpg'
 export {
   homeImg,
   dashboardImg,
@@ -50,5 +51,6 @@ export {
   user3,
   close,
   builderBg,
-  zestifyImg
+  zestifyImg,
+  blogImg,
 };

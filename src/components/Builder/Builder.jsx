@@ -1,9 +1,9 @@
 import React from "react";
-import { boxImg, builderBg, homeImg, midSectionImg } from "../../assets";
+import { boxImg, builderBg, dashboardImg, homeImg, midSectionImg } from "../../assets";
 
 const Builder = () => {
   return (
-    <div className="flex flex-col md:flex-row w-screen">
+    <div className="flex flex-col md:flex-row md:w-screen gap-2">
       <div className="flex flex-col bg-[#F1F1F1] rounded-3xl p-12 z-10 w-full md:w-1/2">
         <div className="mb-0 mt-auto">
           <h1 className="font-bold text-2xl md:text-4xl mb-4">
@@ -38,8 +38,8 @@ const Builder = () => {
           </div>
         </div>
         <div className="md:hidden mt-4 flex flex-col relative w-[96vw] ml-[-3rem]">
-          <img className="z-20 w-[95%] mx-auto" src={homeImg} alt="" />
-          <img className="absolute top-[30%] z-10 mx-auto" src={builderBg} alt="" />
+          <img className="z-20 w-[95%] mx-auto" src={dashboardImg} alt="" />
+          <img className="absolute top-[35%] z-10 mx-auto rounded-b-[20px]" src={builderBg} alt="" />
         </div>
       </div>
 

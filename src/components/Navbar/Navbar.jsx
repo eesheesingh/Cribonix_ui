@@ -65,7 +65,7 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      <ul className={`hidden md:flex space-x-24 px-20 py-4 rounded-full ${scrolled ? "text-black" : "text-white"}`}>
+      <ul className={`hidden md:flex space-x-24 px-20 py-4 rounded-full ${scrolled ? "text-black" : "text-white hover:bg-[#fff] hover:text-[#000] transition-all duration-300"}`}>
         <button onClick={() => scrollToSection("hero")}>Home</button>
         <button onClick={() => scrollToSection("feature")}>Feature</button>
         <button onClick={() => scrollToSection("builder")}>About</button>

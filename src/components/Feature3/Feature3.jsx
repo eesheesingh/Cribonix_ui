@@ -1,5 +1,5 @@
 import React from "react";
-import { check, feature3img } from "../../assets";
+import { check, dashboardImg, feature3img } from "../../assets";
 
 const Feature3 = () => {
   return (
@@ -40,7 +40,7 @@ const Feature3 = () => {
           </ul>
         </div>
         <div className="flex-1">
-          <img src={feature3img} alt="Feature" />
+          <img src={dashboardImg} alt="Feature" />
         </div>
       </div>
     </div>
