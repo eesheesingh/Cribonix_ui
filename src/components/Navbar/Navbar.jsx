@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { close, logo } from "../../assets";
 import style from "../../style";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
       className={`flex justify-between items-center p-3 fixed transition-all duration-300 ${
         scrolled
           ? "top-0 bg-white text-black shadow-xl"
@@ -72,7 +76,12 @@ const Navbar = () => {
         <button onClick={() => scrollToSection("blog")}>Blog</button>
       </ul>
       {isMobileMenuOpen && (
-        <ul className="flex h-screen flex-col items-center fixed inset-0 bg-white text-black z-50 gap-8 pt-36 md:hidden">
+        <motion.ul
+          initial={{ x: '100%' }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex h-screen flex-col items-center fixed inset-0 bg-white text-black z-50 gap-8 pt-36 md:hidden"
+        >
           <li className="absolute top-5 right-5">
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -118,9 +127,9 @@ const Navbar = () => {
           >
             Blog
           </button>
-        </ul>
+        </motion.ul>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 

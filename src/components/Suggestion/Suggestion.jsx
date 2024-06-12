@@ -1,33 +1,66 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { article1, article2, article3, user1, user2, user3 } from "../../assets";
 import { blogs } from "../constants/data";
 
 const Suggestion = () => {
   const navigate = useNavigate();
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const truncateText = (text, length) => {
+    if (!text) return ''; // Add error handling
     return text.length > length ? text.substring(0, length) + "..." : text;
   };
 
   const handleBlogClick = (id) => {
-    navigate(`/blog/${id}`);
+    scrollToTop();
+    setTimeout(() => {
+      navigate(`/blog/${id}`);
+    }, 300); // Adding a delay to ensure smooth scrolling before navigating
   };
 
   return (
     <div className="w-full flex flex-col items-center">
-      <button className="px-12 py-4 bg-[#00ACFF1A] text-[#00ACFF] rounded-full mx-auto font-bold mt-4">
+      <motion.button
+        className="px-12 py-4 bg-[#00ACFF1A] text-[#00ACFF] rounded-full mx-auto font-bold mt-4"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         Blog
-      </button>
-      <h1 className="text-3xl md:text-4xl text-center font-bold md:mx-96 md:my-8 my-4">
+      </motion.button>
+      <motion.h1
+        className="text-3xl md:text-4xl text-center font-bold md:mx-96 md:my-8 my-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1 }}
+      >
         Most popular articles
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8">
+      </motion.h1>
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-3 md:gap-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1 }}
+      >
         {blogs.map((blog, index) => (
-          <div 
+          <motion.div 
             key={index} 
             className="bg-white rounded-3xl p-4 hover:bg-[#f7f7f7] md:shadow-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg" 
             onClick={() => handleBlogClick(blog.id)}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}
           >
             <img
               className="mb-4 md:h-60 h-40 w-full rounded-md"
@@ -42,7 +75,7 @@ const Suggestion = () => {
                 className="text-[#5F6D7E] font-semibold text-xs md:text-base overflow-hidden"
                 style={{ height: '8rem' }}
               >
-                {truncateText(blog.content, 200)}
+                {truncateText(blog.content1 || blog.content, 200)} {/* Ensure the correct content property is used */}
               </p>
             </div>
             <div className="flex justify-between md:mt-8 mt-4 items-center">
@@ -59,9 +92,9 @@ const Suggestion = () => {
               </div>
               <p className="text-[#5F6D7E] md:text-base text-xs">25 Apr</p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

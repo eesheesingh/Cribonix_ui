@@ -36,7 +36,7 @@ const BlogNavbar = () => {
       <button
         onClick={() => window.location.href = '/'}
         className={`md:block px-4 py-2 rounded-full ${
-          scrolled ? "text-black hover:bg-[#000] hover:text-[#fff] transition-all duration-300" : "text-white hover:bg-[#fff] hover:text-[#000] transition-all duration-300"
+          scrolled ? "text-black hover:bg-[#000] hover:text-[#fff] transition-all duration-300" : "text-[#000] hover:bg-[#000] hover:text-[#fff] transition-all duration-300"
         }`}
       ><span className="flex flex-row items-center justify-center">
         <span className="text-2xl">

@@ -50,9 +50,9 @@ const Main = () => {
             <Suggestion />
           </div>
           
-          <div className={`md:mt-[6rem] mt-[2rem] ${styles.boxWidth}`}>
+          {/* <div className={`md:mt-[6rem] mt-[2rem] ${styles.boxWidth}`}>
             <Footer />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
